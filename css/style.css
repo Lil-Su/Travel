@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Chakra+Petch:wght@300&family=Dancing+Script:wght@400;500&family=Edu+QLD+Beginner:wght@400;500&family=Edu+VIC+WA+NT+Beginner&family=Indie+Flower&family=Nunito:ital,wght@0,200;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&family=Righteous&family=Satisfy&family=Splash&display=swap');
+
+*:root{
+    --orange: #ffa500;
+    --gray: #333;
+    --white: #fff;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0px; padding: 0px;
+    border: none; outline: none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+
+}
+
+*::selection{
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+section{
+    padding: 1rem 5%;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.btn{
+    display: inline-block;
+    background: var(--orange);
+    color: var(--white);
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-align: center;
+    padding: .4rem 1.5rem;
+    border: .2rem solid var(--orange);
+}
+.btn:hover{
+    background: rgba(172, 143, 90, 3);
+    color: var(--orange);
+}
+
+.heading{
+    text-align: center;
+    margin: 2rem 0;
+}
+.heading span{
+    font-size: 3rem;
+    color: var(--orange);
+    font-weight: 700;
+    background: rgba(255, 160, 0, .2);
+    padding: .2rem .4rem;
+    border-radius: .2rem;
+}
+.heading .space{
+    background: none;
+}
+
+header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--gray);
+    padding: 1rem 5%;
+    z-index: 999;
+}
+
+header #menu-bar{
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+    border: .2rem solid rgba(255, 255, 255, .6);
+    padding: .3rem;
+    border-radius: .3rem;
+    display: none;
+}
+
+header #menu-bar:hover{
+    color: var(--orange);
+
+}
+
+header .logo{
+    font-size: 1.5rem;
+    color: var(--white);
+    text-transform: uppercase;
+}
+header .logo span{
+    color: var(--orange);
+}
+
+header .navbar a{
+    font-size: 1.3rem;
+    color: var(--white);
+    padding: 0 .5rem;
+
+}
+
+header .navbar a:hover{
+    color: var(--orange);
+    text-decoration: underline;
+}
+header .icons i{
+    font-size: 1.3rem;
+    color: var(--white);
+    margin-right: .5rem;
+    cursor: pointer;
+}
+header .icons:hover{
+    color: var(--orange);
+}
+header .search-bar{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+}
+header .search-bar{
+    position: absolute;
+    top: 100%;
+    left: 0px; width: 100%;
+    background-color: var(--gray);
+    border-top: .1rem solid rgba(255, 255, 255, 2);
+    display: flex;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    
+}
+header .search-bar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+header .search-bar input{
+    width: 100%;
+    font-size: 1.2rem;
+    color: var(--gray);
+    margin: .5rem;
+    padding: .5rem;
+    text-transform: none;
+    border-radius: .5rem;
+
+}
+header .search-bar input::placeholder{
+    text-transform: capitalize;
+}
+header .search-bar label{
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: .5rem;
+}
+
+/* ........... Login now............ */
+
+.login-form{
+    position: fixed;
+    top: -120%; left: 0px; width: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form.active{
+    top: 0px;
+}
+
+.login-form i{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 2rem;
+    color: var(--white);
+    top: 100%; right: 2rem;
+    cursor: pointer;
+}
+
+.login-form i:hover{
+    color: var(--orange);
+}
+.login-form form{
+    background-color: var(--white);
+    border-radius: .5rem;
+    padding: .5rem;
+}
+.login-form form h2{
+    font-size: 2.5rem;
+    color: var(--gray);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.login-form form input[type=email],
+.login-form form input[type=password]{
+    width: 100%;
+    border: 1px solid var(--gray);
+    color: var(--gray);
+    text-transform: none;
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+.login-form form input:focus{
+    border-color: var(--orange);
+}
+.login-form form .btn{
+    width: 100%;
+    margin-bottom: .5rem;
+}
+.login-form form label{
+    font-size: 1.2rem;
+    color: var(--gray);
+}
+
+.login-form form p{
+    font-size: 1.2rem;
+    color: var(--gray);
+    margin-top: .2rem;
+}
+
+.login-form form a{
+    color: var(--orange);
+}
+
+.login-form form a:hover{
+    color: var(--gray);
+    text-decoration: underline;
+}
+
+/* ..............home............. */
+
+.home{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.home video{
+    position: absolute;
+    top: 0px; left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.home .content{
+    text-align: center;
+    color: var(--white);
+}
+
+.home .content h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.home .content p{
+    font-size: 2rem;
+    padding: .5rem 0;
+}
+
+/* .....................book now.................... */
+
+.book .inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.book .inner .image{
+    width: 49%;
+}
+
+.book .inner .image img{
+    width: 100%;
+}
+.book .inner form{
+    width: 49%;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .3);
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.book .inner form .inputbox h3{
+    color: var(--gray);
+    font-size: 1.2rem;
+    margin: .5rem 0;
+}
+
+.book .inner form .inputbox input{
+    width: 100%;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    padding: .7rem;
+    font-size: 1.2;
+    color: var(--gray);
+    text-transform: none;
+}
+
+.book .inner form .btn{
+    margin-top: .5rem;
+}
+
+/* ..........................packages.................... */
+
+.packages .inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.packages .inner .box{
+    width: 30%;
+}
+
+.packages .inner .box img{
+    width: 100%;
+    height: 18rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, .3);
+}
+.packages .inner .box .content h4{
+    font-size: 1.5rem;
+    color: var(--gray);
+
+}
+
+.packages .inner .box .content{
+    padding: .8rem;
+}
+
+.packages .inner .box .content p{
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--gray);
+    font-weight: bold;
+    padding-bottom: .2rem;
+}
+
+.packages .inner .box .content .stars{
+    color: var(--orange);
+    font-size: 1rem;
+}
+
+.packages .inner .box .content span{
+    text-decoration: line-through;
+    font-size: 1rem;
+    color: #666;
+}
+
+.packages .inner .box .content .price{
+    font-size: 1.1rem;
+    color: var(--gray);
+}
+
+.packages .inner .content h4 i{
+    color: var(--orange);
+    font-size: 1.3rem;
+}
+
+/* ...........................................services............................................ */
+
+.services .inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.services .inner .box{
+    text-align: center;
+    padding: 1rem;
+}
+
+.services .inner .box:hover{
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
+}
+
+.services .inner .box i{
+    font-size: 3rem;
+    color: var(--orange);
+}
+
+.services .inner .box h3{
+    font-size: 1.5rem;
+    color: var(--gray);
+    font-weight: bold;
+}
+
+.services .inner .box p{
+    font-size: 1rem;
+    color: var(--gray);
+}
+
+/* ..................gallery.................... */
+
+.gallery .inner{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.gallery .inner .box{
+    width: 23%;
+    height: 15rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery .inner .box img{
+    width: 100%;
+    height: 100%;
+}
+
+.gallery .inner .box .content{
+    position: absolute;
+    top: -100%; 
+    left: -100%;
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 3rem;
+}
+
+.gallery .inner .box .content h3{
+    color: var(--orange);
+    font-size: 1.3rem;
+}
+
+.gallery .inner .box .content p{
+    font-size: 1rem;
+    color: var(--white);
+    padding-bottom: .5rem;
+}
+
+.gallery .inner .box:hover .content{
+    top: 0%;
+    left: 0%;
+    transition: .2s ;
+}
+
+/* ........................contact................................ */
+
+.contact .inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact .inner .image{
+    width: 49%;
+}
+
+.contact .inner .image img{
+    width: 100%;
+}
+
+.contact .inner form{
+    width: 49%;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .3);
+    padding: 2rem;
+}
+
+.contact .inner form .inputbox{
+    display: flex;
+    justify-content: space-between;
+    margin: .3rem 0;
+}
+
+ .contact .inner form .inputbox input{
+    width: 49%;
+    background: rgba(0, 0, 0, .2);
+    margin-bottom: .5rem;
+    font-size: 1.3rem;
+    color: var(--gray);
+    padding: .3rem;
+    
+}
+
+.contact .inner form textarea{
+    background: rgba(0, 0, 0, .2);
+    width: 100%;
+    font-size: 1.3rem;
+    color: var(--gray);
+    padding: .3rem;
+    resize: none;
+    text-transform: none;
+} 
+
+.contact .inner form textarea::placeholder{
+    text-transform: capitalize;
+}
+
+
+/* ............. ......footer....................... */
+
+footer{
+    background: var(--gray);
+}
+footer .inner{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+footer .inner .box{
+    width: 24%;
+}
+
+footer .inner .box h3{
+    color: var(--white);
+    font-size: 1.5rem;
+    padding-bottom: .5rem;
+}
+
+footer .inner .box p{
+    color: var(--white);
+    font-size: 1.1rem;
+}
+
+footer .inner .box a{
+    display: block;
+    font-size: 1.1rem;
+    color: var(--white);
+}
+
+footer .inner .box a:hover{
+    background-color: --;
+    color: ;
+}
+
+@media (max-width: 1200px){
+    .book .inner .image{
+        display: none;
+    }
+
+    .book .inner form{
+        width: 90%;
+    }
+
+    section{
+       padding: 1rem 2%;
+    }
+    .gallery .inner .box .content{
+        padding: 1.5rem .3rem;
+    }
+
+    .contact .inner form{
+        width: 90%;
+    }
+
+    .contact .inner image{
+        display: none;
+    }
+}
+
+@media (max-width: 976px){
+    .packages .inner .box{
+        width: 45%;
+    }
+
+    .services .inner .box h3{
+        font-size: 1.2rem;
+    }
+
+    .gallery .inner .box{
+        width: 45%;
+    }
+    
+}
+
+@media (max-width: 767px){
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0px;
+        background-color: var(--gray);
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, .2);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header .navbar a{
+        display: block;
+        background: rgba(0, 0, 0, .5);
+        margin: .5rem;
+        padding: .5rem;
+    }
+
+    header #menu-bar{
+        display: initial;
+    }
+
+    .packages .inner .box{
+        width: 80%;
+    }
+
+    .services .inner{
+        flex-wrap: wrap;
+    }
+
+    .services .inner .box{
+        width: 45%;
+    }
+
+    .gallery .inner .box{
+        width: 65%;
+    }
+
+    footer .inner{
+        flex-wrap: wrap;
+    }
+
+    footer .inner .box{
+        width: 45%;
+        
+    }
+    footer .inner .box h3{
+        font-size: 1.2rem;
+    }
+
+
+}
